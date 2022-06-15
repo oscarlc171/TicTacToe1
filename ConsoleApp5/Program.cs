@@ -111,8 +111,8 @@ namespace ConsoleApp5
                     Console.Clear();
                     Console.WriteLine("You can't make a move here. You must choose an empty space.");
                     ShowGameBoard();
-                    Player1FirstNumber = int.Parse(Console.ReadLine());
-                    Player1SecondNumber = int.Parse(Console.ReadLine());
+                    Player2FirstNumber = int.Parse(Console.ReadLine());
+                    Player2SecondNumber = int.Parse(Console.ReadLine());
                 }
 
                 gameboard[Player2SecondNumber - 1, Player2FirstNumber - 1] = 2;

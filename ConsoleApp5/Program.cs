@@ -74,6 +74,8 @@ namespace ConsoleApp5
                     gameboard[1,2] == 1 && gameboard[2,2] == 1) || (gameboard[0,0] == 1 && gameboard[1,1] == 1 &&
                     gameboard[2,2] == 1) || (gameboard[0,2] == 1 && gameboard[1,1] == 1 && gameboard[2,0] == 1))
                 {
+                    Console.Clear();
+                    ShowGameBoard();
                     Console.WriteLine("Player 1 wins");
                     break;
                 }
@@ -95,7 +97,7 @@ namespace ConsoleApp5
                 int Player2FirstNumber = int.Parse(Console.ReadLine());
                 int Player2SecondNumber = int.Parse(Console.ReadLine());
 
-                while (Player1FirstNumber > 3 || Player1FirstNumber < 1 || Player1SecondNumber > 3 || Player1SecondNumber < 1)
+                while (Player2FirstNumber > 3 || Player2FirstNumber < 1 || Player2SecondNumber > 3 || Player2SecondNumber < 1)
                 {
                     Console.Clear();
                     Console.WriteLine("Enter a valid coordinate");
@@ -104,7 +106,7 @@ namespace ConsoleApp5
                     Player1SecondNumber = int.Parse(Console.ReadLine());
                 }
 
-                while (gameboard[Player1SecondNumber - 1, Player1FirstNumber - 1] != 0)
+                while (gameboard[Player2SecondNumber - 1, Player2FirstNumber - 1] != 0)
                 {
                     Console.Clear();
                     Console.WriteLine("You can't make a move here. You must choose an empty space.");
@@ -126,6 +128,8 @@ namespace ConsoleApp5
                     gameboard[1, 2] == 2 && gameboard[2, 2] == 2) || (gameboard[0, 0] == 2 && gameboard[1, 1] == 2 &&
                     gameboard[2, 2] == 2) || (gameboard[0, 2] == 2 && gameboard[1, 1] == 2 && gameboard[2, 0] == 2))
                 {
+                    Console.Clear();
+                    ShowGameBoard();
                     Console.WriteLine("Player 2 wins");
                     break;
                 }
